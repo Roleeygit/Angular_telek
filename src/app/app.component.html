@@ -1,0 +1,41 @@
+<!-- File: app.component.html
+Author: Juhász Roland
+Copyright: 2022, Juhász Roland
+Group: Szoft II N
+Date: 2022-11-25
+Github: https://github.com/Roleygit
+Licenc: GNU GPL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+  <h1 class="title">{{title}}</h1>
+  <h1 class="datas">{{[name, class, date]}}</h1>
+
+  <div class="container">
+
+    <label for="aOldal" class="label-form">A site:</label>
+    <input class="form-control form-control-lg" type="text" placeholder="A site" aria-label=".form-control" [(ngModel)]="aSite">
+    <br><br><br>
+
+    <label for="bOldal" class="label-form">B site:</label>
+    <input class="form-control form-control-lg" type="text" placeholder="B site" aria-label="form-control" [(ngModel)]="bSite">
+    <br><br><br>
+
+    <button class="btn btn-danger" (click)="calcArea()">Calculate</button>
+    <a href="/" class="btn btn-warning" id="refresh">Refresh</a>
+    <a href="https://szit.hu/doku.php?id=oktatas:programozas:feladatok:altalanos#feladat_0354" class="btn btn-info" target="_blank">The Task</a><br><br><br>
+
+
+    <label *ngIf="show" for="bOldal" class="label-form">The Area of the plot:</label>
+    <input *ngIf="show" class="form-control" type="text" placeholder="area" aria-label="Disabled input" [(ngModel)]="area" disabled>
+    
+  </div>
+
+</body>
+</html>
